@@ -2,7 +2,7 @@ from flask import g
 import sqlite3
 
 def connect_db():
-    sql = sqlite3.connect('C:/Users/Asus/Desktop/quizu app/data.db')
+    sql = sqlite3.connect('data.db')
     sql.row_factory = sqlite3.Row
     return sql
 
