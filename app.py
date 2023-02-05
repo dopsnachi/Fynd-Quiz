@@ -9,6 +9,12 @@ app=Flask( __name__ , template_folder="templates")
 app.config['SECRET_KEY'] = os.urandom(24)
 
 
+@app.route("/")
+def index_redirect():
+    return redirect("/index")
+
+
+
 emailList=[]
 passwordList=[]
 wholeCredentials=[]
