@@ -219,20 +219,21 @@ def submit_quiz():
         if (ans[6] == request.form.get(mcq)):
             score += 1
     
-    print("Your score is", score)
+    print("score ", score)
     
     # Insert into the users table
     connection = sqlite3.connect('data.db')
     cursor = connection.cursor()
 
     # Find current user in the table    
-    id = 8
+    id = 1
     update_query = f"UPDATE users set score = {score}, total = {total}, attempt = {total} where id = {id};"
     cursor.execute(update_query)
     connection.commit()
     connection.close()
     
     return render_template("user.html")
+
 
 
 
