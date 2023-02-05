@@ -219,7 +219,7 @@ def submit_quiz():
         if (ans[6] == request.form.get(mcq)):
             score += 1
     
-    print("the score is ", score)
+    print("the score is :", score)
     
     # Insert into the users table
     connection = sqlite3.connect('data.db')
